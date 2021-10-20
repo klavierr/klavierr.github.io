@@ -1,0 +1,252 @@
+*{
+  padding:0;
+  margin:0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color:white;
+}
+
+
+#sec3 .loader {
+  height:100vh;
+  width: 100vw;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+
+.loader marquee {
+  opacity: 1;
+  text-transform: uppercase;
+  line-height: 160px;
+  margin: 0;
+  padding: 0;
+  color: #555555;
+  font-size: 150px;
+  font-family: "Cinzel";
+  transition: 0.4s ease-in-out;
+}
+.loader marquee:hover{
+  color: white!important;
+}
+
+
+/*mouse move*/
+.cursor {
+  position: absolute;
+  background: #f93700;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  z-index: 100000;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+      0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  transform: scale(1);
+}
+
+.cursor::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-image: url("http://mirkozeppieri.emanuelepapale.com/wp-content/uploads/2018/07/project-hover-cursor.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.cursor.active {
+  opacity: 1;
+  transform: scale(12);
+}
+.cursor.active::before {
+  opacity: 1;
+}
+.cursor-follower {
+  position: absolute;
+  border: 1px solid rgba(249,55,0,1.00);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  z-index: 10000;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+      0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(4px, 4px);
+}
+.cursor-follower.active {
+  opacity: 0.3;
+  transform: scale(0);
+}
+
+
+
+/* header line reveal */
+#sec1 .wrapper {
+  width: 100vw;
+  height:100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Monument Extended", sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  display: flex;
+}
+
+#sec1 .wrapper .line {
+  width: 70%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+#sec1 .wrapper .line span {
+  position: absolute;
+  font-size: 5rem;
+  line-height: 5.2rem;
+}
+
+
+/* rotate circle */
+.emblem {
+  position: absolute;
+  right: 10vw;
+  bottom: 15vh;
+  width: 25vh;
+  height: 25vh;
+  border-radius: 50%;
+  font-weight: bold;
+  color: orangered;
+  animation: spinZ 15s linear infinite;
+  text-align: center;
+}
+.emblem span::after{
+  position: absolute;
+  content: "";
+  top:50%;
+  right: 50%;
+  transform: translate(50%,50%); 
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background: orangered; 
+}
+.emblem span {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-transform: uppercase;
+  font-size: 2.5vh;
+  transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+}
+@keyframes spinZ {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+
+
+
+
+
+
+
+#sec:not(#sectionPin) {
+  width: 100%;
+  position: relative;
+  
+}
+
+.container img {
+  height: 80vh;
+  width: auto;
+  object-fit: cover;
+}
+
+.container h1 {
+  font-size: 10rem;
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+  z-index: 4;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 16vw;
+  }
+}
+.container h1 span {
+  display: block;
+}
+
+.container h2 {
+  font-size: 2rem;
+  max-width: 400px;
+}
+
+.credit {
+  font-family: Termina, sans-serif;
+}
+.credit a {
+  color: var(--text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#sectionPin {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  left: 0;
+  
+}
+
+.pin-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 10vw;
+}
+.pin-wrap > * {
+  min-width: 60vw;
+  padding: 0 5vw;
+}
+
+/* .container p {
+  position: absolute;
+  bottom: 10vw;
+  right: 10vw;
+  width: 200px;
+  line-height: 1.5;
+} */
