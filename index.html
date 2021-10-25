@@ -2,13 +2,13 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Horizontal scroll section with GSAP ScrollTrigger &amp; Locomotive Scroll</title>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> demo</title>
 
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'><link rel="stylesheet" href="./style.css">
 
+<script src="https://kit.fontawesome.com/cb8f931045.js" crossorigin="anonymous"></script>
 <!-- menu -->
-<link rel="stylesheet" type="text/css" href="MENU-fullscreen-overlay-responsive-navigation-menu-css-marquee-animation-main/styles.css" />
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
@@ -18,12 +18,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 <!-- inner menu -->
-<link rel="stylesheet" type="text/css" href="MenuThumbStackAnimation-main/index.320bd6f3.css">
-<script>!function(){document.documentElement.className="js";var e,t;(t=document.createElement("style")).innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e||alert("Please view this demo in a modern browser that supports CSS Variables.")}();</script>
+<link rel="stylesheet" type="text/css" href="menu.css">
+
 
 <!-- hover img -->
 <link rel="stylesheet" type="text/css" href="ImageRevealHover-master/css/base.css" />
-<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
 
 <!-- rotate circle -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -41,14 +41,24 @@
 <!-- LINE REVEAL -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 
-<!-- animate text -->
-<link
-href="https://fonts.googleapis.com/css?family=Cinzel&display=swap"
-rel="stylesheet" />
 
 
-<!-- trail img -->
-<link rel="stylesheet" href="Image-Trail-Effect-Using-Vanilla-Javascript-master/style.css" />
+
+
+
+<!-- draggable img -->
+<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+<!-- text 3d -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:900'>
+
+
+
+
+<!-- change cursor + mouse move -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
 <body>
 
 
@@ -58,12 +68,13 @@ rel="stylesheet" />
   <div class="cursor-follower"></div>
 
 	<!-- menu -->
-  <div class="menu-open"> <h1 class="header"> menu </h1> </div>
+  <div class="menu-open"> <i class="fas fa-bars"></i> </div>
+  <!-- <div class="menu-open"> <h1 class="header"> Menu </h1> </div> -->
   <div class="nav-container">
-    <div class="menu-close">close</div>
+    <div class="menu-close"><i class="fas fa-times"></i></div>
     <main>
       <div class="stack-wrap" aria-hidden="true">
-         <div class="stack" id="stack-1"> <img class="stack__img" src="MenuThumbStackAnimation-main/1.80b98c5b.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/2.be0b6e97.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/3.1667f2fd.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/4.a242a4db.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/5.cec98852.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/6.63a71a70.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/7.febd1f9e.jpg" alt="Some image"> </div>
+         <div class="stack" id="stack-1"> <img class="stack__img" src="https://images.unsplash.com/photo-1634689474807-1431c8599e7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="Some image"> <img class="stack__img" src="https://images.unsplash.com/photo-1634689474807-1431c8599e7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="Some image"> <img class="stack__img" src="https://images.unsplash.com/photo-1634689474807-1431c8599e7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="Some image"> <img class="stack__img" src="https://images.unsplash.com/photo-1634689474807-1431c8599e7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"  alt="Some image"> <img class="stack__img" src="https://images.unsplash.com/photo-1634689474807-1431c8599e7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="Some image"> <img class="stack__img" src="https://images.unsplash.com/photo-1634689474807-1431c8599e7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80" alt="Some image"> </div>
          <div class="stack" id="stack-2"> <img class="stack__img" src="MenuThumbStackAnimation-main/8.1ec50be9.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/9.42343a9c.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/1MenuThumbStackAnimation-main/0.09b8babf.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/11.6bf710ad.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/12.bd7243dc.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/13.eaca2609.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/14.8a0d313c.jpg" alt="Some image"> </div>
          <div class="stack" id="stack-3"> <img class="stack__img" src="MenuThumbStackAnimation-main/15.9d1ab7d5.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/16.3a8d5f7d.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/17.5d19143b.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/18.145b6e0b.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/19.4e8371a2.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/20.cb743775.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/21.1ad7d602.jpg" alt="Some image"> </div>
          <div class="stack" id="stack-4"> <img class="stack__img" src="MenuThumbStackAnimation-main/22.a626ef06.jpg" alt="Some image"> <img class="stack__img" src="MenuThumbStackAnimation-main/23.b7fe1b36.jpg" alt="Some image"> <img class="stack__img" src="24.ab2f5762.jpg" alt="Some image"> <img class="stack__img" src="25.79ee1745.jpg" alt="Some image"> <img class="stack__img" src="26.6adb6995.jpg" alt="Some image"> <img class="stack__img" src="27.6a129e18.jpg" alt="Some image"> <img class="stack__img" src="28.837c8b23.jpg" alt="Some image"> </div>
@@ -81,12 +92,26 @@ rel="stylesheet" />
       <section class="content-wrap">
          <div class="content" id="content-1">
             <h2 class="content__title ">Cogno Frank</h2>
-            <a class="menubtn" href="about.html">CLick</a> 
-            <p class="content__text"> My cold human, you inspire me to write.<br> I love the way you pray, resist and fly,<br> Invading my mind day and through the night,<br> Always dreaming about the hot hereby.<br> </p>
+           <a href="#" class="menubtn link link--iocaste">
+                <span>Learn more</span>
+                <svg class="link__graphic link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                  <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+                </svg>
+              </a>
+   
+            <p class="content__text"> My cold human, you inspire me to write. I love the way you pray, resist and fly,Invading my mind day and through the night,Always dreaming about the hot hereby. </p>
          </div>
          <div class="content" id="content-2">
             <h2 class="content__title">Loca di Marta</h2>
-            <p class="content__text"> Let me compare you to a green balloon?<br> You are more dandy, bandy and freaky.<br> Big sun heats the handy peaches of June,<br> And summertime has the randy rekey.<br> </p>
+                
+           <a href="#" class="menubtn link link--iocaste">
+            <span>Learn more</span>
+            <svg class="link__graphic link__graphic--slide" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+              <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
+            </svg>
+          </a>
+
+            <p  class="content__text"> Let me compare you to a green balloon? You are more dandy, bandy and freaky. Big sun heats the handy peaches of June,<br> And summertime has the randy rekey.<br> </p>
          </div>
          <div class="content" id="content-3">
             <h2 class="content__title">Missy Mac Blue</h2>
@@ -101,7 +126,7 @@ rel="stylesheet" />
             <p class="content__text"> Let me compare you to a green balloon?<br> You are more dandy, bandy and freaky.<br> Big sun heats the handy peaches of June,<br> And summertime has the randy rekey.<br> </p>
          </div>
 
-         <button class="close unbutton"><span class="close__cross"></span><span></span></button> 
+         <button class="close unbutton"><span class="close__cross"></span><i class="fas fa-long-arrow-alt-left"></i><span></span></button> 
       </section>
       <svg class="circle" vector-effect="non-scaling-stroke" width="1600" height="1600">
          <circle vector-effect="non-scaling-stroke" cx="800" cy="800" r="330" data-svg-origin="800 800" style="transform-origin:0 0"/>
@@ -111,7 +136,7 @@ rel="stylesheet" />
   </div>
 
       <!--page reveal  -->
-    
+<!--     
     <div class="overlay"> 
       <div class="images">
         
@@ -129,7 +154,7 @@ rel="stylesheet" />
         <div class="site-icon">✴</div>
         <div class="site-type">clothing brand</div>
       </div>
-    </div> 
+    </div>  -->
 
 
 
@@ -138,41 +163,57 @@ rel="stylesheet" />
 <!-- partial:index.partial.html -->
 <div class="container">
 
+
+
+
   <section id="sec1">
     <div class="wrapper">
       <div class="line">
-          <span>I code designs. Rad designs for rad learners.</span>
+          <span>Xin vui lòng liên hệ </span>
       </div>
       <div class="line ">
-        <span>  The mission and the vision are to explore, scavenge and play </a>
+        <span>  trang chủ hợp tác </a>
       </div>
       <div class="line ">
         <span> Scavenge and play </a>
       </div>
-      <!-- <div class="line">
-          <span>with creative designs. Because of my passion for design, </span>
-      </div>
-      <div class="line"><span>precision and details, I created Codegrid to bring</span></div>
-      <div class="line"><span>concepts of web designing to you.</span></div> -->
-
       <!-- rotate circle -->
       <div data-scroll data-scroll-speed="2" data-scroll-delay="0.2" class="emblem">Klavier*JadieNgA*</div>
   </div>
-  </section>
 
-    <section id="sec" data-bgcolor="#bcb8ad" data-textcolor="#032f35">
 
-      <div class="block" data-fx="21" data-scroll data-scroll-speed="2" data-scroll-delay="0.2">
-        <a class="block__link" data-img="ImageRevealHover-master/img/42.jpg">Montecristo</a>
-        <a class="block__link" data-img="ImageRevealHover-master/img/1.jpg">Guatavita</a>
+    <section id="sec">
+
+      <div class="block" data-fx="21" data-scroll data-scroll-speed="1" data-scroll-delay="0.2">
+        <a class="block__link" data-img="ImageRevealHover-master/img/1.jpg">trang chủ hợp tác  </a>
+        <a class="block__link" data-img="ImageRevealHover-master/img/1.jpg">liên hệ he mission and the vision are to explore, scavenge and play</a>
       </div> 
 
       <div>
  
-        <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">with GSAP ScrollTrigger & Locomotive Scroll</p>
+        <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">Xin vui lòng liên hệ cho chúng tôiXin vui lòng liên hệ cho chúng tôiXin vui lòng liên hệ cho chúng tôi</p>
 
       </div>
 
+      <button class="button button--atlas">
+        <span>Subscribe</span>
+        <div class="marquee">
+          <div class="marquee__inner">
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+            <span>Subscribe</span>
+          </div>
+        </div>
+      </button>
 
     </section>
 
@@ -197,16 +238,53 @@ rel="stylesheet" />
     <section id="sectionPin">
       <div class="pin-wrap">
         <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-        <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+        <div id="wrapper">
+          <div class="portfolio-item">
+              <div class="portfolio-thumb">
+                 <a href=""> <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="see more"/></a>
+              </div>
+          </div>
+          <HR>
+          <a href=""> click </a>
+          <button href=""> click </button>
+      </div>
+        <div id="wrapper">
+          <div class="portfolio-item">
+              <div class="portfolio-thumb">
+                 <a href=""> <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="see more"/></a>
+              </div>
+          </div>
+          <a href=""> click </a>
+          <button href=""> click </button>
+      </div>
+      <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+        <div id="wrapper">
+          <div class="portfolio-item">
+              <div class="portfolio-thumb">
+                 <a href=""> <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="see more"/></a>
+              </div>
+          </div>
+          <a href=""> click </a>
+          <button href=""> click </button>
+      </div>
+        <div id="wrapper">
+          <div class="portfolio-item">
+              <div class="portfolio-thumb">
+                 <a href=""> <img data-scroll data-scroll-speed="1" src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="see more"/></a>
+              </div>
+          </div>
+          <a href=""> click </a>
+          <button href=""> click </button>
+      </div>
         <!-- <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
         <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt=""> -->
 
       </div>
     </section>
-    <section id="sec" data-bgcolor="#e3857a" data-textcolor="#f1dba7">
+    <!-- <section id="sec" data-bgcolor="#e3857a" data-textcolor="#f1dba7">
       <img src="https://images.pexels.com/photos/4791474/pexels-photo-4791474.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
       <h2 data-scroll data-scroll-speed="1" class="credit"><a href="https://thisisadvantage.com" target="_blank">Made by Advantage</a></h2>
-    </section>
+    </section> -->
 
 
     <section id="sec3">
@@ -221,39 +299,233 @@ rel="stylesheet" />
         >
         <marquee direction="right" scrollamount="10" data-scroll data-scroll-speed="1" data-scroll-delay="0.2" class="textstroke"
             >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Similique, quo.</marquee
-        >
-        <!-- <marquee direction="" scrollamount="40"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ducimus, dolorem.</marquee
-        > -->
-        <!-- <div class="intro">
-            <h1 class="intro-title">Selected</h1>
-        </div> -->
+            Similique, quo.</marquee>
+ 
     </div>
+    </section>
+
+
+
+<section id="sec4">
+      <main>
+        <div class="frame">
+          <h3 class="frame__subtitle"></h3>
+          <div class="frame__indicator"></div>
+        </div>
+        <div class="strip-outer">
+          <div class="strip-inner">
+            <div class="draggable"></div>
+            <div class="strip">
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s"><div class="img-inner" ></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s"><div class="img-inner" ></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"></a><span class="strip__item-plus"></span></span>
+              </div>
+           
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-m"><div class="img-inner" style="background-image:url(https://images.unsplash.com/photo-1634757700535-b02d556600fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span>02</span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-xl"><div class="img-inner" style="background-image:url(https://images.unsplash.com/photo-1634757700535-b02d556600fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span>03</span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-l"><div class="img-inner" style="background-image:url(https://images.unsplash.com/photo-1634757700535-b02d556600fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span>04</span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s"><div class="img-inner" style="background-image:url(https://images.unsplash.com/photo-1634757700535-b02d556600fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span>05</span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-m"><div class="img-inner" style="background-image:url(https://images.unsplash.com/photo-1634757700535-b02d556600fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span>06</span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s"><div class="img-inner" style="background-image:url(https://images.unsplash.com/photo-1634757700535-b02d556600fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span>07</span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-l"><div class="img-inner" style="background-image:url(https://images.unsplash.com/photo-1634757700535-b02d556600fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span>08</span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s"><div class="img-inner" style="background-image:url(https://images.unsplash.com/photo-1634757700535-b02d556600fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span>09</span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer"><div class="img-inner" style="background-image:url(https://images.unsplash.com/photo-1634757700535-b02d556600fc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80)"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-s"><div class="img-inner"></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+              </div>
+              <div class="strip__item">
+                <div class="img-outer img-outer--size-xl"><div class="img-inner" ></div></div>
+                <span class="strip__item-number"><a class="strip__item-link"><span></span></a><span class="strip__item-plus"></span></span>
+              </div>
+
+
+            </div><!--/strip-->
+          </div><!--/strip-inner-->
+          <div class="strip-cover">
+            <h2 class="strip-cover__title">Morandi</h2>
+            <span class="strip-cover__subtitle">2019</span>
+          </div>
+        </div>
+      </main>
+
+
+
+
 
     </section>
 
-    <section id="sec4">
-      <div class="imgg-1 imgg"></div>
-    <div class="imgg-2 imgg"></div>
-    <div class="imgg-3 imgg"></div>
-    <div class="imgg-4 imgg"></div>
-    <div class="imgg-5 imgg"></div>
+<section id="sec5">
+  <ul class="Words">
+    <li class="Words-line">
+      <p>&nbsp;</p>
+      <p>CSS Only </p>
+    </li>
+    <li class="Words-line">
+      <p>CSS Only</p>
+      <p>Perspective</p>
+    </li>
+    <li class="Words-line">
+      <p>Perspective</p>
+      <p>Text Effect</p>
+    </li>
+    <li class="Words-line">
+      <p>Text Effect</p>
+      <p>by CSS Only</p>
+    </li>
+    <!-- <li class="Words-line">
+      <p>by CSS Only </p>
+      <p>James</p>
+    </li>
+    <li class="Words-line">
+      <p>James</p>
+      <p>Bosworth</p>
+    </li>
+    <li class="Words-line">
+      <p>Bosworth</p>
+      <p>&nbsp;</p>
+    </li> -->
+  </ul>
+  
+</section>
 
-    <div class="container">
-      <h1> X&^JSO9 -98 </h1>
+<section id="sec6">
+  <main>
+    <div class="frame">
+      <nav class="slides-nav">
+        <button class="slides-nav__button slides-nav__button--prev" aria-label="Previous slide">
+          <svg><path d="M1.176 11.532a.5.5 0 00-.352.936c5.228 1.96 9.475 5.555 12.752 10.797a.5.5 0 00.848-.53c-3.39-5.424-7.81-9.163-13.248-11.203z"></path><path d="M1.176 12.468a.5.5 0 01-.352-.936C6.052 9.572 10.3 5.978 13.576.735a.5.5 0 01.848.53c-3.39 5.424-7.81 9.163-13.248 11.203z"></path><path d="M1 12.5a.5.5 0 110-1h53a.5.5 0 110 1H1z"></path></svg>
+        </button>
+        <button class="slides-nav__button slides-nav__button--next" aria-label="Next slide">
+          <svg><path d="M53.824 11.532a.5.5 0 01.352.936c-5.228 1.96-9.475 5.555-12.752 10.797a.5.5 0 01-.848-.53c3.39-5.424 7.81-9.163 13.248-11.203z"></path><path d="M53.824 12.468a.5.5 0 00.352-.936C48.948 9.572 44.7 5.978 41.424.735a.5.5 0 00-.848.53c3.39 5.424 7.81 9.163 13.248 11.203z"></path><path d="M54 12.5a.5.5 0 100-1H1a.5.5 0 100 1h53z"></path></svg>
+        </button>
+        <div class="slides-nav__index">
+          <span class="slides-nav__index-current">
+            <span>1</span>
+          </span>
+          &mdash;
+          <span class="slides-nav__index-total">5</span>
+        </div>
+      </nav>
     </div>
-    </section>
-  </div>
+    <div class="slideshow">
+      <figure class="slide slide--current">
+        <div class="slide__img-wrap"><div class="slide__img" style="background-image: url(ShapesSlideshow-main/1.dc197a9a.jpg)"></div></div>
+        <figcaption class="slide__caption">
+          <h2 class="slides__caption-headline">
+            <span class="text-row"><span>Temptation</span></span>
+            <span class="text-row"><span>a <em>desire</em> to <strong>engage</strong></span></span>
+          </h2>
+          
+          <a href="#" class="link link--herse slides__caption-link">
+            <span>Explore</span>
+            <svg class="link__graphic link__graphic--stroke link__graphic--arc" width="100%" height="18" viewBox="0 0 59 18"><path d="M.945.149C12.3 16.142 43.573 22.572 58.785 10.842" pathLength="1"/></svg>
+          </a>
+        </figcaption>
+      </figure>
+      <figure class="slide">
+        <div class="slide__img-wrap"><div class="slide__img" style="background-image: url(ShapesSlideshow-main/2.3ca6bb44.jpg)"></div></div>
+        <figcaption class="slide__caption">
+          <h2 class="slides__caption-headline">
+            <span class="text-row"><span>Heartful <strong>acts</strong></span></span>
+            <span class="text-row"><span>when <em>passion</em> calls</span></span>
+          </h2>
+          <a class="slides__caption-link" href="#"><span>Explore</span></a>
+        </figcaption>
+      </figure>
+      <figure class="slide">
+        <div class="slide__img-wrap"><div class="slide__img" style="background-image: url(ShapesSlideshow-main/5.689b68fd.jpg)"></div></div>
+        <figcaption class="slide__caption">
+          <h2 class="slides__caption-headline">
+            <span class="text-row"><span>Somebody's <strong>game</strong></span></span>
+            <span class="text-row"><span>in ancient <em>dreams</em></span></span>
+          </h2>
+          <a class="slides__caption-link" href="#"><span>Explore</span></a>
+        </figcaption>
+      </figure>
+      <figure class="slide">
+        <div class="slide__img-wrap"><div class="slide__img" style="background-image: url(ShapesSlideshow-main/7.2d66e3ed.jpg)"></div></div>
+        <figcaption class="slide__caption">
+          <h2 class="slides__caption-headline">
+            <span class="text-row"><span>Far from <em>Venice</em></span></span>
+            <span class="text-row"><span><strong>sunset</strong> in her <em>gaze</em></span></span>
+          </h2>
+          <a class="slides__caption-link" href="#"><span>Explore</span></a>
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+</section>
+
+
+
+<section id="sec7">
+
+  <div class="smooth-scroll-wrapper">
+    <div class="content">
+        <div class="container">
+            <!-- <div class="image-container">
+                <h2 class="text text-dark">
+                    <span class="parallax-title">
+                        we live in the details
+                    </span>
+                </h2>
+            </div> -->
+
+            <h2 class="text">
+                <span class="parallax-title">
+                    we live in the details
+                </span>
+            </h2>
+        </div>
+    </div>
+</div> 
+
+
+</section>
 
 
 
 
 
-</body>
+</div>
+
+<script src="ShapesSlideshow-main/demo2.44794d1a.js"></script>
 
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js'></script><script  src="search-input-animation/script.js"></script>
 
 
 
@@ -337,19 +609,7 @@ rel="stylesheet" />
 
 
 
-<!-- active menu -->
-<script>
-// Add active class to the current button (highlight it)
-var header = document.getElementById("myDIV");
-var btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-btns[i].addEventListener("click", function() {
-var current = document.getElementsByClassName("active");
-current[0].className = current[0].className.replace(" active", "");
-this.className += " active";
-});
-}
-</script>
+
 
 
 
@@ -391,7 +651,7 @@ t1.reversed(!t1.reversed());
 </script>
 
 <!-- inner menu -->
-<script src="MenuThumbStackAnimation-main/index.cad48f07.js"></script> 
+<script src="menu.js"></script> 
 
 
 
@@ -466,9 +726,9 @@ t1.reversed(!t1.reversed());
   const textrev = gsap.timeline();
 
   textrev.from(".line span", 4, {
-      y: 200,
+      y: 300,
       ease: "power4.out",
-      delay: 5,
+      delay: 1,
       skewY: 10,
       stagger: {
           amount: 0.4,
@@ -478,7 +738,7 @@ t1.reversed(!t1.reversed());
 
 
 <!-- trail image -->
-<script>
+<!-- <script>
   const img1 = document.querySelector(".imgg-1");
   const img2 = document.querySelector(".imgg-2");
   const img3 = document.querySelector(".imgg-3");
@@ -507,7 +767,21 @@ t1.reversed(!t1.reversed());
       "top :" + (e.pageY - 225) + "px; left: " + (e.pageX - 200) + "px"
     );
   });
+</script> -->
+
+
+
+<!-- draggable img -->
+<script src="img-DraggableImageStrip/js/imagesloaded.pkgd.min.js"></script>
+<script src="img-DraggableImageStrip/js/TweenMax.min.js"></script>
+<script src="img-DraggableImageStrip/js/draggabilly.pkgd.min.js"></script>
+<script src="img-DraggableImageStrip/js/demo.js"></script>
+<script>
+  // Preload all the images in the page
+  imagesLoaded(document.querySelectorAll('.img-inner'), {background: true}, () => document.body.classList.remove('loading'));
 </script>
+
+
 
 
 

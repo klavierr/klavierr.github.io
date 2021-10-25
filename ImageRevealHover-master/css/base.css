@@ -3,15 +3,15 @@
 
 .block {
 	text-transform: lowercase;
-	padding: 0 4rem 20vh;
+	/* padding: 0 4rem 20vh; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	z-index: 11;
+
 	
 }
 
-.block__title {
+/* .block__title {
 	position: relative;
 	font-size: 3rem;
 	margin: 0 0 1.5rem 0;
@@ -24,14 +24,19 @@
 
 .block__title:hover {
 	color: var(--color-blocktitle-hover);
-}
+} */
 
 .block__link {
 	position: relative;
 	cursor: pointer;
-	padding: 0.5rem 0;
-	color: var(--color-blocklink);
-	font-size: 3rem;
+
+	color: white;
+	font-size: 10rem;
+
+	margin: 20px;
+	width: 100%;
+
+	text-align: center;
 }
 
 .block__link:hover {
@@ -55,6 +60,7 @@
 	position: relative;
 	font-weight: bold;
 	cursor: pointer;
+	
 }
 
 .content__text-link:first-of-type,
@@ -195,12 +201,14 @@ a.content__text-link[data-fx="14"]:hover::after {
 
 .hover-reveal {
 	position: fixed;
-	width: 200px;
-	height: 150px;
+	width: 500px;
+	height: 350px;
 	top: 0;
 	left: 0;
 	pointer-events: none;
 	opacity: 0;
+	
+	z-index: -1;
 }
 
 .hover-reveal__inner,
@@ -224,7 +232,7 @@ a.content__text-link[data-fx="14"]:hover::after {
 	background-position: 50% 50%;
 }
 
-@media screen and (min-width: 53em) {
+/* @media screen and (min-width: 53em) {
 	.message {
 		display: none;
 	}
@@ -280,4 +288,4 @@ a.content__text-link[data-fx="14"]:hover::after {
 	.content__text {
 		grid-column: span 3;
 	}
-}
+} */

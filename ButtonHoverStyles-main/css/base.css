@@ -132,6 +132,11 @@
 .button--atlas {
 	font-family: signo, sans-serif;
 	font-weight: 500;
+	background: transparent;
+	border-top: 1px solid white;
+	color:white;
+	width: 100%;
+	font-size: 100px;
 }
 
 .button--atlas > span {
@@ -142,7 +147,7 @@
 	opacity: 0;
 }
 
-/* .marquee {
+.marquee {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -159,15 +164,15 @@
 	--move-initial: calc(-25% + var(--offset));
 	--move-final: calc(-50% + var(--offset));
 	transform: translate3d(var(--move-initial), 0, 0);
-	animation: marquee 1s linear infinite;
+	animation: marquee 5s linear infinite;
 	animation-play-state: paused;
 	opacity: 0;
-} */
+}
 
 .button--atlas:hover .marquee__inner {
 	animation-play-state: running;
 	opacity: 1;
-	transition-duration: 0.4s;
+	transition-duration: 0.5s;
 }
 
 .marquee span {
