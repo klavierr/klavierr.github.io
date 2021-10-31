@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Typography Motion Effect | Codrops</title>
+
+		<link rel="stylesheet" type="text/css" href="base.98fd6c19.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>document.documentElement.className = "js";
+var supportsCssVars = function supportsCssVars() {
+  var e,
+      t = document.createElement("style");
+  return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+};
+supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	<link rel="stylesheet" href="js.00a46daa.css"></head>
+
+
+
+
+<link rel="stylesheet" href="./style.css">
+<!-- rotate circle -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<!-- change cursor + mouse move -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+<body class="loading">
+	<!-- mouse -->
+	<div class="cursor"></div>
+	<div class="cursor-follower"></div>
+	<main>
+		<div class="wrapper">
+		<div class="emblem">Klaver Studio * Photography * </div>
+	</div>
+				<a class="frame__about">
+					<span class="frame__about-item frame__about-item--current">About</span>
+					<span class="frame__about-item">Close</span>
+				</a>
+			<!-- </div>  -->
+			<div class="content">
+				<section class="content__item content__item--home content__item--current">
+					<p class="content__paragraph content__paragraph--large content__paragraph--first" data-splitting="">Make Data</p>
+					<p class="content__paragraph content__paragraph--large content__paragraph--right content__paragraph--last" data-splitting="">your strength</p>
+					<div class="content__item-credits">Recreation of the effect on <a href="http://www.danimorales-style.com/">Dani Morales</a> by <a href="https://dribbble.com/shots/11133412-Transitions-Fashion-stylist-Project">Thibaud Allie</a>
+					</div>
+				</section>
+				<section class="content__item content__item--about">
+					<p class="content__paragraph" data-splitting="">Johnathan Flynn is</p>
+					<p class="content__paragraph content__paragraph--right" data-splitting="">a Salt Lake City</p>
+					<p class="content__paragraph" data-splitting="">based <em>data</em> and <em>social</em></p>
+					<p class="content__paragraph" data-splitting="">engineer</p>
+					<figure class="content__figure">
+						<img class="content__figure-img" src="1.dc197a9a.jpg" alt="Some image">
+						<figcaption class="content__figure-caption">We are here face to face with a crucial point in analytic realism. Realism argues that we have no alternative except either to regard analysis as falsifying, and thus commit ourselves to distrust of science as an organ of knowledge.</figcaption>
+					</figure>
+				</section>
+			</div>
+			<!-- <a class="frame__about">
+				<span class="frame__about-item frame__about-item--current">About</span>
+				<span class="frame__about-item">Close</span>
+			</a>
+			<div class="content">
+				<section class="content__item content__item--home content__item--current">
+					<p class="content__paragraph content__paragraph--large content__paragraph--first" data-splitting="">Make Data</p>
+					<p class="content__paragraph content__paragraph--large content__paragraph--right content__paragraph--last" data-splitting="">your strength</p>
+					<div class="content__item-credits">Recreation of the effect on <a href="http://www.danimorales-style.com/">Dani Morales</a> by <a href="https://dribbble.com/shots/11133412-Transitions-Fashion-stylist-Project">Thibaud Allie</a></div>
+				</section>
+				<section class="content__item content__item--about">
+					<p class="content__paragraph" data-splitting="">Johnathan Flynn is</p>
+					<p class="content__paragraph content__paragraph--right" data-splitting="">a Salt Lake City</p>
+					<p class="content__paragraph" data-splitting="">based <em>data</em> and <em>social</em></p>
+					<p class="content__paragraph" data-splitting="">engineer</p>
+					<figure class="content__figure">
+						<img class="content__figure-img" src="1.dc197a9a.jpg" alt="Some image">
+						<figcaption class="content__figure-caption">We are here face to face with a crucial point in analytic realism. Realism argues that we have no alternative except either to regard analysis as falsifying, and thus commit ourselves to distrust of science as an organ of knowledge.</figcaption>
+					</figure>
+				</section>
+			</div>
+	 -->
+		<svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
+	
+		</svg>
+		<script src="js.00a46daa.js"></script>
+
+
+
+		<script  src="circle-script.js"></script>
+
+		<!-- mouse -->
+<script>
+	var cursor = $(".cursor"),
+		follower = $(".cursor-follower");
+  
+	var posX = 0,
+		posY = 0,
+		mouseX = 0,
+		mouseY = 0;
+  
+	TweenMax.to({}, 0.016, {
+		repeat: -1,
+		onRepeat: function() {
+			posX += (mouseX - posX) / 9;
+			posY += (mouseY - posY) / 9;
+  
+			TweenMax.set(follower, {
+				css: {
+					left: posX - 20,
+					top: posY - 20
+				}
+			});
+  
+			TweenMax.set(cursor, {
+				css: {
+					left: mouseX,
+					top: mouseY
+				}
+			});
+		}
+	});
+  
+	$(document).on("mousemove", function(e) {
+		mouseX = e.pageX;
+		mouseY = e.pageY;
+	});
+  
+	$(".portfolio-item img").on("mouseenter", function() {
+		cursor.addClass("active");
+		follower.addClass("active");
+	});
+  
+	$(".portfolio-item img").on("mouseleave", function() {
+		cursor.removeClass("active");
+		follower.removeClass("active");
+	});
+  </script>
+
+
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+
+	</body>
+</html>

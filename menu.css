@@ -13,7 +13,7 @@
 
 .menu-open:hover {
 	transform: scale(1.2);
-	color: orangered
+
 }
 
 .menu-close {
@@ -41,23 +41,22 @@
 .nav-container {
 	color: white;
 	position: fixed;
-	left: -110%;
+	left: -120%;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgb(19, 19, 19);
+	background-color: rgb(14, 14, 14);
 	z-index: 1000;
 	pointer-events: none;
-	font-family: Ariom ;
-
+	font-family: Ariom
 }
 
-.nav-container:after {
+.nav-container:after{
 	animation: grain 8s steps(10) infinite;
 	background-image: url(noise.f31eb271.png);
 	content: "";
 	height: 300%;
 	left: -50%;
-	opacity: .6;
+	opacity: .5;
 	position: fixed;
 	top: -100%;
 	width: 300%;
@@ -66,7 +65,6 @@
 .menu__item {
 	position: relative;
 	padding: 0 6vw;
-	/* text-align: center; */
 }
 
 .menu__item:hover {
@@ -200,8 +198,9 @@
 
 .menubtn {
 	position: absolute!important;
-	bottom: 100px!important;
+	bottom: 60px!important;
 	z-index: 1;
+	font-family: Ariom
 }
 
 .active {
@@ -234,7 +233,7 @@
 	color: #e84e77;
 	line-height: 1;
 	text-transform: uppercase;
-	font-size: 7.5vw;
+	font-size: 8vw;
 
 	will-change: transform;
 	pointer-events: none;
@@ -277,7 +276,7 @@
 
 .stack {
 	position: absolute;
-	top: 0;
+	top: -50px;
 	left: 0;
 	width: 100%;
 	height: 100vh;
@@ -325,7 +324,6 @@
 .content__title {
 	color: white;
 	font-size: 9vw;
-	font-weight: 600;
 	text-transform: uppercase;
 	white-space: nowrap;
 	position: absolute;
@@ -346,27 +344,20 @@
 } */
 
 .content__text {
-	position: absolute;
-	bottom: -100px;
-	font-size: 20px;
-	width: 80%;
-	text-align: justify;
-	color:white
+position: relative;
+top:40vh;
+width: 60%;
+	font-size: 15px;
+
+	text-align: center;
+	color:white;
+	font-family: Montserrat;
 }
 
+.aboutmenu{
+	top: 65vh
+}
 
-/* .content__text:after {
-	content: "";
-	position: fixed;
-	pointer-events: none;
-	z-index: 500;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	background: linear-gradient(transparent, transparent 70%,black)
-} */
 
 .close {
 	color: white;
@@ -393,7 +384,7 @@
 	opacity: 1;
 	pointer-events: auto
 }
-/* 
+
 @media screen and (min-width:53em) {
 	.frame {
 		text-align: left;
@@ -426,9 +417,9 @@
 	.frame button {
 		pointer-events: auto
 	}
-} */
+} 
 
-/* .splitting .char,
+.splitting .char,
 .splitting .word {
 	display: inline-block
 }
@@ -511,4 +502,4 @@
 		--distance-x: calc(var(--offset-x)*var(--offset-x)/var(--center-x));
 		--distance-y: calc(var(--offset-y)*var(--offset-y)/var(--center-y))
 	}
-} */
+} 
