@@ -1,3 +1,12 @@
+#topbtn{
+	height:500px;
+	width: 100%;
+	background: red;
+	position: relative;;
+	bottom: 500px;
+	opacity: 1;
+	z-index: 200;
+}
 
 *{
   padding:0;
@@ -7,7 +16,7 @@
   box-sizing: border-box;
 }
 a{
-    color:white
+	color: #f1e4d6; 
 }
 @font-face {
 	font-family: NeueMachina ;
@@ -78,26 +87,9 @@ a{
   background-color: rgb(14, 14, 14);
   color:white;
   font-family: Gallery  ;
-  /* font-family: Ariom; */
+  overflow-x: hidden;
 }
-/* .container:before{
-    animation: grain 8s steps(10) infinite;
-    background-image: url(noise.f31eb271.png);
-    content: "";
-    height: 300%;
-    left: -50%;
-    opacity: .6;
-    position: fixed;
-    top: -100%;
-    width: 300%;
-	 background-image: url("https://gifimage.net/wp-content/uploads/2017/11/film-grain-gif.gif") ;
-	position: fixed;
-  opacity: 0.4;
-	content: "";
-	height:100%;
-	width: 100%; 
 
-} */
 
 @keyframes grain {
 	0%,
@@ -679,27 +671,18 @@ a{
 	justify-content: space-between;
 	align-items: center;
 }
-/* .explore{
-	width: 100%;
-	margin:0;
-	display: flex;
-	justify-content: space-between;
-	margin: 20px 0;
-	align-items: center;
-} */
+
 .explore h3{
 	font-size: 30px!important;
 }
-/* #sectionPin  #wrapper:last-child{
-	width: 70vw;
-	margin-left: 100px;
-} */
+
 #sectionPin {
   height: 100vh;
   overflow: hidden;
   display: flex;
   left: 0;
-  margin: 150px 0
+  margin: 150px 0;
+  position:relative
 }
 #sectionPin #wrapper h3{
 	margin: 40px 0;
@@ -2125,4 +2108,198 @@ line-height: 1.2;
 	position: relative;
 	bottom:20px;
 	color: #f1e4d6!important
+}
+
+
+
+#contact-1{
+	padding-top:20vh;
+	color: rgb(245, 231, 218)
+}
+.sayhi{
+	font-size: 70px;
+	margin-left: 12vw;
+}
+.chuthich p:nth-child(2){
+	position: relative;
+	left:20px;
+	top: 48px;
+	letter-spacing: 1px;
+	font-size: 18;
+	
+}
+.chuthich{
+	display: flex;
+}
+.info-r hr{
+	margin: 20px 0;
+	border-bottom: 1px solid rgb(153, 145, 138)
+}
+.info-r{
+margin-left: 40%;
+margin-top:100px;
+margin-right: 5vw
+}
+.info{
+	display: flex;
+	justify-content: space-between;
+}
+.info p{
+	
+}
+.info p:nth-child(1){
+	font-size: 23px;
+	margin-top: 0px;
+	margin-bottom: 60px;
+
+}
+.info p:nth-child(2){
+	font-size: 45px;	
+}
+.info-d{
+	width: 80%!important;
+	text-align: right;
+}
+
+
+
+.input-login p{
+	font-size: 60px;
+	margin-bottom: 100px;
+}
+.input-data{
+	height: 40px;
+	width: 100%;
+	position: relative;
+	margin-bottom: 60px;
+}
+.input-field:focus ~ label, .input-field:not(:placeholder-shown) ~ label{
+	transform: translateY(-25px);
+	
+}
+.input-data label{
+	position: absolute;
+	bottom: 10px;
+	font-size: 20px;
+	color: #f1e4d6;
+	pointer-events: none;
+	transition: all 0.5s ease;
+}
+.input-login .underline{
+	position: absolute;
+	bottom: 3px;
+	height: 1px;
+	width: 100%;
+}
+.input-login .underline:before {
+	position: absolute;
+	content:"";
+	height: 100%;
+	width: 100%;
+	background: #f1e4d6;
+	transform: scaleX(0);
+	transition: transform 0.5s ease
+}
+.input-field:focus ~ .underline:before, .input-field:not(:placeholder-shown) ~ .input-login .underline:before
+{
+	transform: scaleX(1);
+}
+.input-login .maintitle{
+	margin-bottom: 50px;
+}
+.name{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.name .input-data{
+	width: calc(100% / 2 - 20px)
+}
+.input-field
+{
+	width: 100%;
+	padding: 8px 0!important;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	font-family: Montserrat;
+	background: transparent;
+	font-size: 12px;
+}
+.textarea{
+	height: 120px;
+	border: 1px solid #999;
+	width: 100%;
+	padding: 8px 0 5px  5px;
+	font-family: Montserrat;
+	outline: none;
+	background: transparent;
+	color: #f1e4d6;
+
+}
+.border{
+	position: absolute;
+	top:0;
+	right:0;
+	height:97%;
+	width: 100%;
+	border: 2px solid #f1e4d6;
+	opacity: 0.6;
+	transform: scaleX(0);
+	transition: transform 0.5s ease
+}
+.contenttext{
+	font-size: 20px;
+}
+.mess{
+	position: relative;
+	margin-top: 9px;
+}
+.input-field:focus ~ .underline:before, .input-field:not(:placeholder-shown) ~ .underline:before
+{
+	transform: scaleX(1);
+}
+.textarea:focus ~ .border
+{
+	transform: scaleX(1);
+}
+.input-field:nth-child(1){margin-right: 20px;}
+.date{
+	margin-top:30px;
+	width: 220px;
+	margin-right: 50px;
+}
+.datetime{
+	display: flex;
+
+}
+.datetime label{
+	font-size: 20px;
+}
+#contact-1 input{
+	color: #f1e4d6
+}
+.submit-btn
+{
+	width: 200px;
+	padding: 10px 30px;
+	cursor: pointer;
+	margin-top: 30px;
+	background: transparent;
+	border: 1px solid #999;
+	outline: none;
+	color: #f1e4d6;
+	letter-spacing: 1px;
+	transition: 0.2s ease;
+	position: relative;
+	font-family: Gallery ;
+	font-size: 18px;
+	margin-bottom: 80px;
+}
+.submit-btn:hover{
+	color: black;
+	background:#f1e4d6
 }
