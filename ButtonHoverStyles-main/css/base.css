@@ -244,7 +244,7 @@
 	font-family: Montserrat;
 	width: 175px;
 	height: 120px;
-	color: #fff;
+	color:  rgb(245, 231, 218);
 	background: none;
 }
 
@@ -257,7 +257,7 @@
 }
 
 .button--janus:hover::before {
-	background: rgb(255, 255, 255);
+	background:  rgb(245, 231, 218);
 	-webkit-clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
 	clip-path: path("M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z");
 }
@@ -268,7 +268,7 @@
 	width: 97%;
 	top: 5%;
 	border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
-	border: 1px solid white;
+	border: 1px solid  rgb(245, 231, 218);;
 	transform: rotate(-20deg);
 	z-index: -1;
 	transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
@@ -930,12 +930,11 @@ https://oreillymedia.github.io/Using_SVG/extras/ch07-textpaths.html */
 	clip-path: circle(50% at 50% 50%);
 	width: 120px;
 	height: 120px;
-	/* font-family: aktiv-grotesk-extended, sans-serif;
-	font-weight: 700; */
+
 	text-transform: uppercase;
 	font-size: 13px;
 	font-family: Montserrat;
-	color: white;
+	color: rgb(245, 231, 218)
 }
 
 .progress {
